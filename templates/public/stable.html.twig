@@ -24,7 +24,10 @@
 					<td>{{ stable.stableName }}</td>
 					<td>{{ stable.stableFirstColor }}</td>
 					<td>{{ stable.stableSecondColor }}</td>
+					<td><a href="{{ path('stable_view' , {'id' : stable.id}) }}"><button>Lien</button></a></td>
 				</tr>
+
+				
 			{% else %}
 				<tr>
 					<td colspan="5">no records found</td>

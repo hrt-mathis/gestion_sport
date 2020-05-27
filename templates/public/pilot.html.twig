@@ -24,7 +24,10 @@
 					<td>{{ pilot.pilotFirstName }}</td>
 					<td>{{ pilot.pilotLastName }}</td>
 					<td>{{ pilot.pilotAge }}</td>
+					<td><a href="{{ path('pilot_view' , {'id' : pilot.id}) }}"><button>Lien</button></a></td>
 				</tr>
+
+				
 			{% else %}
 				<tr>
 					<td colspan="5">no records found</td>

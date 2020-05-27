@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pilot index
+{% endblock %}
+
+{% block body %}
+	{% include "header.html.twig" %}
+	<h1>Pilot index</h1>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>PilotName</th>
+				<th>PilotYear</th>
+				<th>PilotDescription</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+				<tr>
+					<td>{{ pilot.id }}</td>
+					<td>{{ pilot.pilotName }}</td>
+					<td>{{ pilot.pilotYear ? pilot.pilotYear|date('Y-m-d') : '' }}</td>
+					<td>{{ pilot.pilotDescription }}</td>
+				</tr>
+
+		</tbody>
+	</table>
+        <a href="{{ path('pilots_index' , {'id' : pilot.id}) }}"><button>Return</button></a
+{% endblock %}

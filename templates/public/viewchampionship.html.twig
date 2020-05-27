@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Championship index
+{% endblock %}
+
+{% block body %}
+	{% include "header.html.twig" %}
+	<h1>Championship index</h1>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>ChampionshipName</th>
+				<th>ChampionshipYear</th>
+				<th>ChampionshipDescription</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+				<tr>
+					<td>{{ championship.id }}</td>
+					<td>{{ championship.championshipName }}</td>
+					<td>{{ championship.championshipYear ? championship.championshipYear|date('Y-m-d') : '' }}</td>
+					<td>{{ championship.championshipDescription }}</td>
+				</tr>
+
+		</tbody>
+	</table>
+        <a href="{{ path('championships_index' , {'id' : championship.id}) }}"><button>Return</button></a
+{% endblock %}

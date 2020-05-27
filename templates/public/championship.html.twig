@@ -19,12 +19,16 @@
 		</thead>
 		<tbody>
 			{% for championship in championships %}
-				<tr>
-					<td>{{ championship.id }}</td>
-					<td>{{ championship.championshipName }}</td>
-					<td>{{ championship.championshipYear ? championship.championshipYear|date('Y-m-d') : '' }}</td>
-					<td>{{ championship.championshipDescription }}</td>
-				</tr>
+				
+                    <tr>
+                        <td>{{ championship.id }}</td>
+                        <td>{{ championship.championshipName }}</td>
+                        <td>{{ championship.championshipYear ? championship.championshipYear|date('Y-m-d') : '' }}</td>
+                        <td>{{ championship.championshipDescription }}</td>
+                        <td><a href="{{ path('championship_view' , {'id' : championship.id}) }}"><button>Lien</button></a></td>
+				    </tr>
+                    
+                
 			{% else %}
 				<tr>
 					<td colspan="5">no records found</td>
