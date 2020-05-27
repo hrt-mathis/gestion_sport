@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Admin;
+namespace App\Controller;
 
 use App\Entity\Championship;
 use App\Entity\Pilot;
@@ -23,7 +23,7 @@ class PublicController extends AbstractController
         $championships = $repository->findAll();
 
         return $this->render(
-            'Championship/index.html.twig',
+            'public/championship.html.twig',
             array("championships" => $championships)
         );
     }
@@ -37,7 +37,7 @@ class PublicController extends AbstractController
         $pilots = $repository->findAll();
 
         return $this->render(
-            'Pilot/index.html.twig',
+            'public/pilot.html.twig',
             array("pilots" => $pilots)
         );
     }
@@ -51,7 +51,7 @@ class PublicController extends AbstractController
         $stables = $repository->findAll();
 
         return $this->render(
-            'Stable/index.html.twig',
+            'public/stable.html.twig',
             array("stables" => $stables)
         );
     }

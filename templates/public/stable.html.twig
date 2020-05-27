@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Stable index
+{% endblock %}
+
+{% block body %}
+	{% include "header.html.twig" %}
+	<h1>Stable index</h1>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>StableName</th>
+				<th>StableFirstColor</th>
+				<th>StableSecondColor</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for stable in stables %}
+				<tr>
+					<td>{{ stable.id }}</td>
+					<td>{{ stable.stableName }}</td>
+					<td>{{ stable.stableFirstColor }}</td>
+					<td>{{ stable.stableSecondColor }}</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="5">no records found</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}
