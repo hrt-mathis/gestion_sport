@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\Championship;
 use App\Form\ChampionshipType;
@@ -83,7 +83,7 @@ class ChampionshipController extends AbstractController
      */
     public function delete(Request $request, Championship $championship): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$championship->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $championship->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($championship);
             $entityManager->flush();

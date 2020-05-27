@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\Pilot;
 use App\Form\PilotType;
@@ -83,7 +83,7 @@ class PilotController extends AbstractController
      */
     public function delete(Request $request, Pilot $pilot): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$pilot->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $pilot->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($pilot);
             $entityManager->flush();

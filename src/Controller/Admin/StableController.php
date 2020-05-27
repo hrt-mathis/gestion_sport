@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\Stable;
 use App\Form\StableType;
@@ -83,7 +83,7 @@ class StableController extends AbstractController
      */
     public function delete(Request $request, Stable $stable): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$stable->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $stable->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($stable);
             $entityManager->flush();
