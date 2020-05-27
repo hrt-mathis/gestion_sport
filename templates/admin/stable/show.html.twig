@@ -25,6 +25,18 @@
 				<th>StableSecondColor</th>
 				<td>{{ stable.stableSecondColor }}</td>
 			</tr>
+			<tr>
+				<th>StableChampionship</th>
+				<td>{{ stable.championship.championshipName }}</td>
+			</tr>
+			<tr>
+				<th>StablePilots</th>
+				<td>
+					{% for stablePilot in stable.pilots %}
+						{{ stablePilot.pilotFirstName }}
+					{% endfor %}
+				</td>
+			</tr>
 		</tbody>
 	</table>
 

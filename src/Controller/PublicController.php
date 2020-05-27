@@ -55,5 +55,4 @@ class PublicController extends AbstractController
             array("stables" => $stables)
         );
     }
-
 }
