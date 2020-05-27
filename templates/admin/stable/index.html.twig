@@ -14,6 +14,7 @@
 				<th>StableName</th>
 				<th>StableFirstColor</th>
 				<th>StableSecondColor</th>
+				<th>stableChampionship</th>
 				<th>actions</th>
 			</tr>
 		</thead>
@@ -24,6 +25,7 @@
 					<td>{{ stable.stableName }}</td>
 					<td>{{ stable.stableFirstColor }}</td>
 					<td>{{ stable.stableSecondColor }}</td>
+					<td>{{ stable.championship.championshipName }}</td>
 					<td>
 						<a href="{{ path('stable_show', {'id': stable.id}) }}">show</a>
 						<a href="{{ path('stable_edit', {'id': stable.id}) }}">edit</a>
