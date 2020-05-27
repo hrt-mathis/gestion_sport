@@ -1,39 +1,41 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Pilot index{% endblock %}
+{% block title %}Pilot index
+{% endblock %}
 
 {% block body %}
-    <h1>Pilot index</h1>
+	{% include "header.html.twig" %}
+	<h1>Pilot index</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>PilotFirstName</th>
-                <th>PilotLastName</th>
-                <th>PilotAge</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for pilot in pilots %}
-            <tr>
-                <td>{{ pilot.id }}</td>
-                <td>{{ pilot.pilotFirstName }}</td>
-                <td>{{ pilot.pilotLastName }}</td>
-                <td>{{ pilot.pilotAge }}</td>
-                <td>
-                    <a href="{{ path('pilot_show', {'id': pilot.id}) }}">show</a>
-                    <a href="{{ path('pilot_edit', {'id': pilot.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>PilotFirstName</th>
+				<th>PilotLastName</th>
+				<th>PilotAge</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for pilot in pilots %}
+				<tr>
+					<td>{{ pilot.id }}</td>
+					<td>{{ pilot.pilotFirstName }}</td>
+					<td>{{ pilot.pilotLastName }}</td>
+					<td>{{ pilot.pilotAge }}</td>
+					<td>
+						<a href="{{ path('pilot_show', {'id': pilot.id}) }}">show</a>
+						<a href="{{ path('pilot_edit', {'id': pilot.id}) }}">edit</a>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="5">no records found</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
 
-    <a href="{{ path('pilot_new') }}">Create new</a>
+	<a href="{{ path('pilot_new') }}">Create new</a>
 {% endblock %}
