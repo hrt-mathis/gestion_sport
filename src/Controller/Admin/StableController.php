@@ -20,7 +20,7 @@ class StableController extends AbstractController
      */
     public function index(StableRepository $stableRepository): Response
     {
-        return $this->render('stable/index.html.twig', [
+        return $this->render('admin/stable/index.html.twig', [
             'stables' => $stableRepository->findAll(),
         ]);
     }
@@ -42,7 +42,7 @@ class StableController extends AbstractController
             return $this->redirectToRoute('stable_index');
         }
 
-        return $this->render('stable/new.html.twig', [
+        return $this->render('admin/stable/new.html.twig', [
             'stable' => $stable,
             'form' => $form->createView(),
         ]);
@@ -53,7 +53,7 @@ class StableController extends AbstractController
      */
     public function show(Stable $stable): Response
     {
-        return $this->render('stable/show.html.twig', [
+        return $this->render('admin/stable/show.html.twig', [
             'stable' => $stable,
         ]);
     }
@@ -72,7 +72,7 @@ class StableController extends AbstractController
             return $this->redirectToRoute('stable_index');
         }
 
-        return $this->render('stable/edit.html.twig', [
+        return $this->render('admin/stable/edit.html.twig', [
             'stable' => $stable,
             'form' => $form->createView(),
         ]);

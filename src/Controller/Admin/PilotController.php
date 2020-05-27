@@ -20,7 +20,7 @@ class PilotController extends AbstractController
      */
     public function index(PilotRepository $pilotRepository): Response
     {
-        return $this->render('pilot/index.html.twig', [
+        return $this->render('admin/pilot/index.html.twig', [
             'pilots' => $pilotRepository->findAll(),
         ]);
     }
@@ -42,7 +42,7 @@ class PilotController extends AbstractController
             return $this->redirectToRoute('pilot_index');
         }
 
-        return $this->render('pilot/new.html.twig', [
+        return $this->render('admin/pilot/new.html.twig', [
             'pilot' => $pilot,
             'form' => $form->createView(),
         ]);
@@ -53,7 +53,7 @@ class PilotController extends AbstractController
      */
     public function show(Pilot $pilot): Response
     {
-        return $this->render('pilot/show.html.twig', [
+        return $this->render('admin/pilot/show.html.twig', [
             'pilot' => $pilot,
         ]);
     }
@@ -72,7 +72,7 @@ class PilotController extends AbstractController
             return $this->redirectToRoute('pilot_index');
         }
 
-        return $this->render('pilot/edit.html.twig', [
+        return $this->render('admin/pilot/edit.html.twig', [
             'pilot' => $pilot,
             'form' => $form->createView(),
         ]);

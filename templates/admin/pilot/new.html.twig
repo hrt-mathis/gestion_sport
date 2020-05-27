@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Pilot
+{% endblock %}
+
+{% block body %}
+	<h1>Create new Pilot</h1>
+
+	{{ include('admin/pilot/_form.html.twig') }}
+
+	<a href="{{ path('pilot_index') }}">back to list</a>
+{% endblock %}

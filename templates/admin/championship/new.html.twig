@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Championship
+{% endblock %}
+
+{% block body %}
+	<h1>Create new Championship</h1>
+
+	{{ include('admin/championship/_form.html.twig') }}
+
+	<a href="{{ path('championship_index') }}">back to list</a>
+{% endblock %}

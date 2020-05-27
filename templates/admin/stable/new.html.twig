@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Stable
+{% endblock %}
+
+{% block body %}
+	<h1>Create new Stable</h1>
+
+	{{ include('admin/stable/_form.html.twig') }}
+
+	<a href="{{ path('stable_index') }}">back to list</a>
+{% endblock %}
