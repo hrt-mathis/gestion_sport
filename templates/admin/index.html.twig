@@ -18,22 +18,33 @@
 		}
 	</style>
 
-	<div class="example-wrapper">
-		<h1>Hello
-			{{ controller_name }}! ✅</h1>
+	<h1>Bienvenue dans l'interface administrateur de votre site</h1>
+	<div class="admin__options">
+		<div>
 
-		This friendly message is coming from:
-		<ul>
-			<li>Your controller at
-				<code>
-					<a href="{{ 'C:/Users/Bastien/Desktop/MDS/Gestion_sport/gestion_sport/src/Controller/AdminController.php'|file_link(0) }}">src/Controller/AdminController.php</a>
-				</code>
-			</li>
-			<li>Your template at
-				<code>
-					<a href="{{ 'C:/Users/Bastien/Desktop/MDS/Gestion_sport/gestion_sport/templates/admin/index.html.twig'|file_link(0) }}">templates/admin/index.html.twig</a>
-				</code>
-			</li>
-		</ul>
+			<h3>Pour accéder aux Pilotes cliquez ci-dessous</h3>
+			<a href="{{path("pilot_index")}}">
+				<button>Contrôle des Pilotes</button>
+			</a>
+		</div>
+		<div>
+
+			<h3>Pour accéder aux Championnats cliquez ci-dessous</h3>
+			<a href="{{path("championship_index")}}">
+				<button>Contrôle des Championnats</button>
+			</a>
+		</div>
+		<div>
+
+			<h3>Pour accéder aux Ecuries cliquez ci-dessous</h3>
+			<a href="{{path("stable_index")}}">
+				<button>Contrôle des Ecuries</button>
+			</a>
+		</div>
 	</div>
+	<div class="flex">
+		<a>
+			<button>Retour à la vue utilisateur</button>
+		</a>
+	</dev>
 {% endblock %}

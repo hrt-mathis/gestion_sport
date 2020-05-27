@@ -1,31 +1,37 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Championship index
+{% block title %}Championship view
 {% endblock %}
 
 {% block body %}
-	{% include "header.html.twig" %}
-	<h1>Championship index</h1>
+{% include "header.html.twig" %}
+<h1>Championship view</h1>
 
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Id</th>
-				<th>ChampionshipName</th>
-				<th>ChampionshipYear</th>
-				<th>ChampionshipDescription</th>
-				<th>actions</th>
-			</tr>
-		</thead>
-		<tbody>
-				<tr>
-					<td>{{ championship.id }}</td>
-					<td>{{ championship.championshipName }}</td>
-					<td>{{ championship.championshipYear ? championship.championshipYear|date('Y-m-d') : '' }}</td>
-					<td>{{ championship.championshipDescription }}</td>
-				</tr>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>ChampionshipName</th>
+			<th>ChampionshipYear</th>
+			<th>ChampionshipDescription</th>
+			<th>ChampionshipStable</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{ championship.id }}</td>
+			<td>{{ championship.championshipName }}</td>
+			<td>{{ championship.championshipYear ? championship.championshipYear|date('Y-m-d') : '' }}</td>
+			<td>{{ championship.championshipDescription }}</td>
+			<td>
+				{% for championshipStable in championship.stables %}
+					{{ championshipStable.stableName }}
+				{% endfor %}
+			</td>
+		</tr>
 
-		</tbody>
-	</table>
-        <a href="{{ path('championships_index' , {'id' : championship.id}) }}"><button>Return</button></a
-{% endblock %}
+	</tbody>
+</table>
+<a href="{{ path('championships_index') }}">
+	<button>Return</button>
+</a {% endblock %}

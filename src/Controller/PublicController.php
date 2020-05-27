@@ -29,7 +29,7 @@ class PublicController extends AbstractController
     }
 
     /**
-     * @Route("/view/{id}",name="championship_view")
+     * @Route("/championships/view/{id}",name="championship_view")
      */
     public function viewChampionship(Championship $championship)
     {
@@ -54,7 +54,7 @@ class PublicController extends AbstractController
     }
 
     /**
-     * @Route("/view/{id}",name="pilot_view")
+     * @Route("/pilots/view/{id}",name="pilot_view")
      */
     public function viewPilot(Pilot $pilot)
     {
@@ -79,14 +79,13 @@ class PublicController extends AbstractController
     }
 
     /**
-     * @Route("/view/{id}",name="stable_view")
+     * @Route("/stables/view/{id}",name="stable_view")
      */
     public function viewStable(Stable $stable)
     {
         return $this->render(
-            'public/viewchampionship.html.twig',
+            'public/viewstable.html.twig',
             array("stable" => $stable)
         );
     }
-
 }

@@ -1,31 +1,39 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}stable index
+{% block title %}stable view
 {% endblock %}
 
 {% block body %}
-	{% include "header.html.twig" %}
-	<h1>Stable index</h1>
+{% include "header.html.twig" %}
+<h1>Stable view</h1>
 
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Id</th>
-				<th>StableName</th>
-				<th>StableYear</th>
-				<th>StableDescription</th>
-				<th>actions</th>
-			</tr>
-		</thead>
-		<tbody>
-				<tr>
-					<td>{{ stable.id }}</td>
-					<td>{{ stable.stableName }}</td>
-					<td>{{ stable.stableYear ? stable.stableYear|date('Y-m-d') : '' }}</td>
-					<td>{{ stable.stableDescription }}</td>
-				</tr>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>StableName</th>
+			<th>StableFirstColor</th>
+			<th>StableSecondColor</th>
+			<th>stableChampionship</th>
+			<th>stablePilots</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{ stable.id }}</td>
+			<td>{{ stable.stableName }}</td>
+			<td>{{ stable.stableFirstColor }}</td>
+			<td>{{ stable.stableSecondColor }}</td>
+			<td>{{ stable.championship.championshipName }}</td>
+			<td>
+				{% for stablePilot in stable.pilots %}
+					{{ stablePilot.pilotFirstName }}
+				{% endfor %}
+			</td>
+		</tr>
 
-		</tbody>
-	</table>
-        <a href="{{ path('stables_index' , {'id' : stable.id}) }}"><button>Return</button></a
-{% endblock %}
+	</tbody>
+</table>
+<a href="{{ path('stables_index') }}">
+	<button>Return</button>
+</a {% endblock %}

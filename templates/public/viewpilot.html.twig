@@ -1,31 +1,37 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Pilot index
+{% block title %}Pilot view
 {% endblock %}
 
 {% block body %}
-	{% include "header.html.twig" %}
-	<h1>Pilot index</h1>
+{% include "header.html.twig" %}
+<h1>Pilot view</h1>
 
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Id</th>
-				<th>PilotName</th>
-				<th>PilotYear</th>
-				<th>PilotDescription</th>
-				<th>actions</th>
-			</tr>
-		</thead>
-		<tbody>
-				<tr>
-					<td>{{ pilot.id }}</td>
-					<td>{{ pilot.pilotName }}</td>
-					<td>{{ pilot.pilotYear ? pilot.pilotYear|date('Y-m-d') : '' }}</td>
-					<td>{{ pilot.pilotDescription }}</td>
-				</tr>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>PilotFirstName</th>
+			<th>PilotLastName</th>
+			<th>PilotAge</th>
+			<th>PilotStable</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{ pilot.id }}</td>
+			<td>{{ pilot.pilotFirstName }}</td>
+			<td>{{ pilot.pilotLastName }}</td>
+			<td>{{ pilot.pilotAge }}</td>
+			<td>
+				{% for PilotStable in pilot.stable %}
+					{{ PilotStable.stableName }}
+				{% endfor %}
+			</td>
+		</tr>
 
-		</tbody>
-	</table>
-        <a href="{{ path('pilots_index' , {'id' : pilot.id}) }}"><button>Return</button></a
-{% endblock %}
+	</tbody>
+</table>
+<a href="{{ path('pilots_index') }}">
+	<button>Return</button>
+</a {% endblock %}
