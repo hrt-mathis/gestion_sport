@@ -20,7 +20,7 @@ class ChampionshipController extends AbstractController
      */
     public function index(ChampionshipRepository $championshipRepository): Response
     {
-        return $this->render('championship/index.html.twig', [
+        return $this->render('admin/championship/index.html.twig', [
             'championships' => $championshipRepository->findAll(),
         ]);
     }
@@ -42,7 +42,7 @@ class ChampionshipController extends AbstractController
             return $this->redirectToRoute('championship_index');
         }
 
-        return $this->render('championship/new.html.twig', [
+        return $this->render('admin/championship/new.html.twig', [
             'championship' => $championship,
             'form' => $form->createView(),
         ]);
@@ -53,7 +53,7 @@ class ChampionshipController extends AbstractController
      */
     public function show(Championship $championship): Response
     {
-        return $this->render('championship/show.html.twig', [
+        return $this->render('admin/championship/show.html.twig', [
             'championship' => $championship,
         ]);
     }
@@ -72,7 +72,7 @@ class ChampionshipController extends AbstractController
             return $this->redirectToRoute('championship_index');
         }
 
-        return $this->render('championship/edit.html.twig', [
+        return $this->render('admin/championship/edit.html.twig', [
             'championship' => $championship,
             'form' => $form->createView(),
         ]);

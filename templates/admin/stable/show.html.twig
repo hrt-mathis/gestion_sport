@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Stable
+{% endblock %}
+
+{% block body %}
+	{% include "header.html.twig" %}
+	<h1>Stable</h1>
+
+	<table class="table">
+		<tbody>
+			<tr>
+				<th>Id</th>
+				<td>{{ stable.id }}</td>
+			</tr>
+			<tr>
+				<th>StableName</th>
+				<td>{{ stable.stableName }}</td>
+			</tr>
+			<tr>
+				<th>StableFirstColor</th>
+				<td>{{ stable.stableFirstColor }}</td>
+			</tr>
+			<tr>
+				<th>StableSecondColor</th>
+				<td>{{ stable.stableSecondColor }}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<a href="{{ path('stable_index') }}">back to list</a>
+
+	<a href="{{ path('stable_edit', {'id': stable.id}) }}">edit</a>
+
+	{{ include('admin/stable/_delete_form.html.twig') }}
+{% endblock %}

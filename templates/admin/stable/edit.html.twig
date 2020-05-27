@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Stable
+{% endblock %}
+
+{% block body %}
+	{% include "header.html.twig" %}
+	<h1>Edit Stable</h1>
+
+	{{ include('admin/stable/_form.html.twig', {'button_label': 'Update'}) }}
+
+	<a href="{{ path('stable_index') }}">back to list</a>
+
+	{{ include('admin/stable/_delete_form.html.twig') }}
+{% endblock %}
