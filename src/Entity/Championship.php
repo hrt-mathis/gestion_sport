@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ChampionshipRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -31,6 +33,16 @@ class Championship
      * @ORM\Column(type="string", length=255)
      */
     private $championshipDescription;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Stable::class, mappedBy="Championship")
+     */
+    private $stables;
+
+    public function __construct()
+    {
+        $this->stables = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -69,6 +81,37 @@ class Championship
     public function setChampionshipDescription(string $championshipDescription): self
     {
         $this->championshipDescription = $championshipDescription;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Stable[]
+     */
+    public function getStables(): Collection
+    {
+        return $this->stables;
+    }
+
+    public function addStable(Stable $stable): self
+    {
+        if (!$this->stables->contains($stable)) {
+            $this->stables[] = $stable;
+            $stable->setChampionship($this);
+        }
+
+        return $this;
+    }
+
+    public function removeStable(Stable $stable): self
+    {
+        if ($this->stables->contains($stable)) {
+            $this->stables->removeElement($stable);
+            // set the owning side to null (unless already changed)
+            if ($stable->getChampionship() === $this) {
+                $stable->setChampionship(null);
+            }
+        }
 
         return $this;
     }

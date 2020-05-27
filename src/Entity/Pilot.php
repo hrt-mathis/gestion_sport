@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\PilotRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -31,6 +33,16 @@ class Pilot
      * @ORM\Column(type="integer")
      */
     private $pilotAge;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Stable::class, inversedBy="pilots")
+     */
+    private $Stable;
+
+    public function __construct()
+    {
+        $this->Stable = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -69,6 +81,32 @@ class Pilot
     public function setPilotAge(int $pilotAge): self
     {
         $this->pilotAge = $pilotAge;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Stable[]
+     */
+    public function getStable(): Collection
+    {
+        return $this->Stable;
+    }
+
+    public function addStable(Stable $stable): self
+    {
+        if (!$this->Stable->contains($stable)) {
+            $this->Stable[] = $stable;
+        }
+
+        return $this;
+    }
+
+    public function removeStable(Stable $stable): self
+    {
+        if ($this->Stable->contains($stable)) {
+            $this->Stable->removeElement($stable);
+        }
 
         return $this;
     }
