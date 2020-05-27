@@ -14,6 +14,7 @@
 				<th>ChampionshipName</th>
 				<th>ChampionshipYear</th>
 				<th>ChampionshipDescription</th>
+				<th>ChampionshipStable</th>
 				<th>actions</th>
 			</tr>
 		</thead>
@@ -24,6 +25,11 @@
 					<td>{{ championship.championshipName }}</td>
 					<td>{{ championship.championshipYear ? championship.championshipYear|date('Y-m-d') : '' }}</td>
 					<td>{{ championship.championshipDescription }}</td>
+					<td>
+						{% for championshipStable in championship.stables %}
+							{{ championshipStable.stableName }}
+						{% endfor %}
+					</td>
 					<td>
 						<a href="{{ path('championship_show', {'id': championship.id}) }}">show</a>
 						<a href="{{ path('championship_edit', {'id': championship.id}) }}">edit</a>

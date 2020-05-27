@@ -27,6 +27,11 @@
 					<td>{{ stable.stableSecondColor }}</td>
 					<td>{{ stable.championship.championshipName }}</td>
 					<td>
+						{% for stablePilot in stable.pilots %}
+							{{ stablePilot.pilotFirstName }}
+						{% endfor %}
+					</td>
+					<td>
 						<a href="{{ path('stable_show', {'id': stable.id}) }}">show</a>
 						<a href="{{ path('stable_edit', {'id': stable.id}) }}">edit</a>
 					</td>

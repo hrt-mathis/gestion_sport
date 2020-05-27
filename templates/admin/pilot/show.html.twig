@@ -25,6 +25,14 @@
 				<th>PilotAge</th>
 				<td>{{ pilot.pilotAge }}</td>
 			</tr>
+			<tr>
+				<th>PilotStable</th>
+				<td>
+					{% for PilotStable in pilot.stable %}
+						{{ PilotStable.stableName }}
+					{% endfor %}
+				</td>
+			</tr>
 		</tbody>
 	</table>
 

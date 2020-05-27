@@ -25,6 +25,14 @@
 				<th>ChampionshipDescription</th>
 				<td>{{ championship.championshipDescription }}</td>
 			</tr>
+			<tr>
+				<th>ChampionshipStable</th>
+				<td>
+					{% for championshipStable in championship.stables %}
+						{{ championshipStable.stableName }}
+					{% endfor %}
+				</td>
+			</tr>
 		</tbody>
 	</table>
 

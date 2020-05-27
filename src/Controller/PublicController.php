@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Admin;
+namespace App\Controller;
 
 use App\Entity\Championship;
 use App\Entity\Pilot;
@@ -55,5 +55,4 @@ class PublicController extends AbstractController
             array("stables" => $stables)
         );
     }
-
 }
