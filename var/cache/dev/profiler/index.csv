@@ -1,0 +1,17 @@
+7d2c4f,::1,GET,http://localhost:8000/admin/championship,1590572760,7b78cd,500
+7b78cd,::1,GET,http://localhost:8000/admin/championship,1590572760,,500
+b5991f,::1,GET,http://localhost:8000/admin/championship/,1590572767,3a4b58,500
+3a4b58,::1,GET,http://localhost:8000/admin/championship/,1590572767,,500
+2d9679,::1,GET,http://localhost:8000/championship/,1590572858,107130,500
+107130,::1,GET,http://localhost:8000/championship/,1590572858,,500
+133ddb,::1,GET,http://localhost:8000/championship/,1590572873,ca4cbe,500
+ca4cbe,::1,GET,http://localhost:8000/championship/,1590572873,,500
+d764d2,::1,GET,http://localhost:8000/championship/,1590572893,20ab8c,500
+20ab8c,::1,GET,http://localhost:8000/championship/,1590572893,,500
+6a421a,::1,GET,http://localhost:8000/championship/,1590572921,8284b1,500
+8284b1,::1,GET,http://localhost:8000/championship/,1590572921,,500
+d2cee1,::1,GET,http://localhost:8000/championship/,1590572975,4f0c29,500
+4f0c29,::1,GET,http://localhost:8000/championship/,1590572975,,500
+f24f27,::1,GET,http://localhost:8000/championship/,1590572984,,200
+b6b9d2,::1,GET,http://localhost:8000/championship/,1590573043,5e55dc,500
+5e55dc,::1,GET,http://localhost:8000/championship/,1590573043,,500

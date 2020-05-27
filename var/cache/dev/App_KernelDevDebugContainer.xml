@@ -302,25 +302,25 @@
     <service id="kernel" class="App\Kernel" public="true" synthetic="true">
       <tag name="routing.route_loader"/>
     </service>
-    <service id="App\Controller\Admin\ChampionshipController" class="App\Controller\Admin\ChampionshipController" public="true" autowire="true" autoconfigure="true">
+    <service id="App\Controller\ChampionshipController" class="App\Controller\ChampionshipController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.pNNo5z3.App\Controller\Admin\ChampionshipController"/>
+        <argument type="service" id=".service_locator.pNNo5z3.App\Controller\ChampionshipController"/>
       </call>
     </service>
-    <service id="App\Controller\Admin\PilotController" class="App\Controller\Admin\PilotController" public="true" autowire="true" autoconfigure="true">
+    <service id="App\Controller\PilotController" class="App\Controller\PilotController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.pNNo5z3.App\Controller\Admin\PilotController"/>
+        <argument type="service" id=".service_locator.pNNo5z3.App\Controller\PilotController"/>
       </call>
     </service>
-    <service id="App\Controller\Admin\StableController" class="App\Controller\Admin\StableController" public="true" autowire="true" autoconfigure="true">
+    <service id="App\Controller\StableController" class="App\Controller\StableController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.pNNo5z3.App\Controller\Admin\StableController"/>
+        <argument type="service" id=".service_locator.pNNo5z3.App\Controller\StableController"/>
       </call>
     </service>
     <service id="App\Form\ChampionshipType" class="App\Form\ChampionshipType" autowire="true" autoconfigure="true">
@@ -4588,15 +4588,15 @@
       <tag name="maker.command"/>
       <argument>C:\Users\Bastien\Desktop\MDS\Gestion_sport\gestion_sport</argument>
     </service>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\ChampionshipController" class="App\Controller\Admin\ChampionshipController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\ChampionshipController" class="App\Controller\Admin\ChampionshipController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\Admin\ChampionshipController" class="App\Controller\Admin\ChampionshipController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\PilotController" class="App\Controller\Admin\PilotController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\PilotController" class="App\Controller\Admin\PilotController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\Admin\PilotController" class="App\Controller\Admin\PilotController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\StableController" class="App\Controller\Admin\StableController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\StableController" class="App\Controller\Admin\StableController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\Admin\StableController" class="App\Controller\Admin\StableController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ChampionshipController" class="App\Controller\ChampionshipController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ChampionshipController" class="App\Controller\ChampionshipController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ChampionshipController" class="App\Controller\ChampionshipController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PilotController" class="App\Controller\PilotController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PilotController" class="App\Controller\PilotController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\PilotController" class="App\Controller\PilotController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\StableController" class="App\Controller\StableController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\StableController" class="App\Controller\StableController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\StableController" class="App\Controller\StableController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ChampionshipType" class="App\Form\ChampionshipType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ChampionshipType" class="App\Form\ChampionshipType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PilotType" class="App\Form\PilotType" autowire="true" abstract="true"/>
@@ -4855,33 +4855,33 @@
         <argument key="stable" type="service" id=".errored..service_locator.mr1I2lA.App\Entity\Stable"/>
       </argument>
     </service>
-    <service id=".service_locator.EBA4kD7" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.qB5K.EY" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Controller\Admin\ChampionshipController::delete" type="service" id=".service_locator.uA.GKRP"/>
-        <argument key="App\Controller\Admin\ChampionshipController::edit" type="service" id=".service_locator.uA.GKRP"/>
-        <argument key="App\Controller\Admin\ChampionshipController::index" type="service" id=".service_locator.lH7DRR."/>
-        <argument key="App\Controller\Admin\ChampionshipController::show" type="service" id=".service_locator.uA.GKRP"/>
-        <argument key="App\Controller\Admin\PilotController::delete" type="service" id=".service_locator.Pq59GCq"/>
-        <argument key="App\Controller\Admin\PilotController::edit" type="service" id=".service_locator.Pq59GCq"/>
-        <argument key="App\Controller\Admin\PilotController::index" type="service" id=".service_locator.i6gqweC"/>
-        <argument key="App\Controller\Admin\PilotController::show" type="service" id=".service_locator.Pq59GCq"/>
-        <argument key="App\Controller\Admin\StableController::delete" type="service" id=".service_locator.mr1I2lA"/>
-        <argument key="App\Controller\Admin\StableController::edit" type="service" id=".service_locator.mr1I2lA"/>
-        <argument key="App\Controller\Admin\StableController::index" type="service" id=".service_locator.QNFbXiW"/>
-        <argument key="App\Controller\Admin\StableController::show" type="service" id=".service_locator.mr1I2lA"/>
-        <argument key="App\Controller\Admin\ChampionshipController:delete" type="service" id=".service_locator.uA.GKRP"/>
-        <argument key="App\Controller\Admin\ChampionshipController:edit" type="service" id=".service_locator.uA.GKRP"/>
-        <argument key="App\Controller\Admin\ChampionshipController:index" type="service" id=".service_locator.lH7DRR."/>
-        <argument key="App\Controller\Admin\ChampionshipController:show" type="service" id=".service_locator.uA.GKRP"/>
-        <argument key="App\Controller\Admin\PilotController:delete" type="service" id=".service_locator.Pq59GCq"/>
-        <argument key="App\Controller\Admin\PilotController:edit" type="service" id=".service_locator.Pq59GCq"/>
-        <argument key="App\Controller\Admin\PilotController:index" type="service" id=".service_locator.i6gqweC"/>
-        <argument key="App\Controller\Admin\PilotController:show" type="service" id=".service_locator.Pq59GCq"/>
-        <argument key="App\Controller\Admin\StableController:delete" type="service" id=".service_locator.mr1I2lA"/>
-        <argument key="App\Controller\Admin\StableController:edit" type="service" id=".service_locator.mr1I2lA"/>
-        <argument key="App\Controller\Admin\StableController:index" type="service" id=".service_locator.QNFbXiW"/>
-        <argument key="App\Controller\Admin\StableController:show" type="service" id=".service_locator.mr1I2lA"/>
+        <argument key="App\Controller\ChampionshipController::delete" type="service" id=".service_locator.uA.GKRP"/>
+        <argument key="App\Controller\ChampionshipController::edit" type="service" id=".service_locator.uA.GKRP"/>
+        <argument key="App\Controller\ChampionshipController::index" type="service" id=".service_locator.lH7DRR."/>
+        <argument key="App\Controller\ChampionshipController::show" type="service" id=".service_locator.uA.GKRP"/>
+        <argument key="App\Controller\PilotController::delete" type="service" id=".service_locator.Pq59GCq"/>
+        <argument key="App\Controller\PilotController::edit" type="service" id=".service_locator.Pq59GCq"/>
+        <argument key="App\Controller\PilotController::index" type="service" id=".service_locator.i6gqweC"/>
+        <argument key="App\Controller\PilotController::show" type="service" id=".service_locator.Pq59GCq"/>
+        <argument key="App\Controller\StableController::delete" type="service" id=".service_locator.mr1I2lA"/>
+        <argument key="App\Controller\StableController::edit" type="service" id=".service_locator.mr1I2lA"/>
+        <argument key="App\Controller\StableController::index" type="service" id=".service_locator.QNFbXiW"/>
+        <argument key="App\Controller\StableController::show" type="service" id=".service_locator.mr1I2lA"/>
+        <argument key="App\Controller\ChampionshipController:delete" type="service" id=".service_locator.uA.GKRP"/>
+        <argument key="App\Controller\ChampionshipController:edit" type="service" id=".service_locator.uA.GKRP"/>
+        <argument key="App\Controller\ChampionshipController:index" type="service" id=".service_locator.lH7DRR."/>
+        <argument key="App\Controller\ChampionshipController:show" type="service" id=".service_locator.uA.GKRP"/>
+        <argument key="App\Controller\PilotController:delete" type="service" id=".service_locator.Pq59GCq"/>
+        <argument key="App\Controller\PilotController:edit" type="service" id=".service_locator.Pq59GCq"/>
+        <argument key="App\Controller\PilotController:index" type="service" id=".service_locator.i6gqweC"/>
+        <argument key="App\Controller\PilotController:show" type="service" id=".service_locator.Pq59GCq"/>
+        <argument key="App\Controller\StableController:delete" type="service" id=".service_locator.mr1I2lA"/>
+        <argument key="App\Controller\StableController:edit" type="service" id=".service_locator.mr1I2lA"/>
+        <argument key="App\Controller\StableController:index" type="service" id=".service_locator.QNFbXiW"/>
+        <argument key="App\Controller\StableController:show" type="service" id=".service_locator.mr1I2lA"/>
       </argument>
     </service>
     <service id=".service_locator.Y7gDuDN" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5170,21 +5170,21 @@
         <argument key="twig" type="service" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id=".service_locator.pNNo5z3.App\Controller\Admin\ChampionshipController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator_context" id="App\Controller\Admin\ChampionshipController"/>
-      <argument>App\Controller\Admin\ChampionshipController</argument>
+    <service id=".service_locator.pNNo5z3.App\Controller\ChampionshipController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\ChampionshipController"/>
+      <argument>App\Controller\ChampionshipController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.pNNo5z3" method="withContext"/>
     </service>
-    <service id=".service_locator.pNNo5z3.App\Controller\Admin\PilotController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator_context" id="App\Controller\Admin\PilotController"/>
-      <argument>App\Controller\Admin\PilotController</argument>
+    <service id=".service_locator.pNNo5z3.App\Controller\PilotController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\PilotController"/>
+      <argument>App\Controller\PilotController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.pNNo5z3" method="withContext"/>
     </service>
-    <service id=".service_locator.pNNo5z3.App\Controller\Admin\StableController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator_context" id="App\Controller\Admin\StableController"/>
-      <argument>App\Controller\Admin\StableController</argument>
+    <service id=".service_locator.pNNo5z3.App\Controller\StableController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\StableController"/>
+      <argument>App\Controller\StableController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.pNNo5z3" method="withContext"/>
     </service>
@@ -5339,12 +5339,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.EBA4kD7"/>
+      <argument type="service" id=".service_locator.qB5K.EY"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.EBA4kD7"/>
+      <argument type="service" id=".service_locator.qB5K.EY"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -5723,7 +5723,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.EBA4kD7"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.qB5K.EY"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

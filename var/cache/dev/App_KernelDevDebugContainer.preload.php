@@ -6,7 +6,7 @@
 use Symfony\Component\DependencyInjection\Dumper\Preloader;
 
 require dirname(__DIR__, 3).'\\vendor/autoload.php';
-require __DIR__.'/ContainerPqZOM08/App_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerQ9LNNl4/App_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -26,9 +26,9 @@ $classes[] = 'Symfony\Component\HttpClient\HttpClient';
 $classes[] = 'Symfony\Bridge\Monolog\Logger';
 $classes[] = 'Symfony\Component\HttpFoundation\RequestMatcher';
 $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
-$classes[] = 'App\Controller\Admin\ChampionshipController';
-$classes[] = 'App\Controller\Admin\PilotController';
-$classes[] = 'App\Controller\Admin\StableController';
+$classes[] = 'App\Controller\ChampionshipController';
+$classes[] = 'App\Controller\PilotController';
+$classes[] = 'App\Controller\StableController';
 $classes[] = 'App\Form\ChampionshipType';
 $classes[] = 'App\Form\PilotType';
 $classes[] = 'App\Form\StableType';
